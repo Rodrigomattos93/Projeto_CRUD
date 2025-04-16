@@ -15,14 +15,14 @@ class BookBase(BaseModel):
 class BookCreate(BookBase):
     pass
 
-class BookRead(BookBase):
+class BookResponse(BookBase):
     id: int
     created_at = datetime
 
     class Config:
         orm_mode = True
 
-class BookUpdate(BookBase):
+class BookUpdate(BaseModel):
     title: Optional[str] = None
     author: Optional[str] = None
     publication_year: Optional[int] = None

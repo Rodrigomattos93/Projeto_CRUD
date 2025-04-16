@@ -1,6 +1,9 @@
-def Hello_Word():
-    print("Hello, World!")
-    return True
+from fastapi import FastAPI
+from db import engine
+import models
+from routers import router
 
-if __name__ == '__main__' :
-    Hello_Word()
+models.Base.metadase.create_all(bind=engine)
+
+app = FastAPI()
+app.include_router(router)
