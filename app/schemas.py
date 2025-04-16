@@ -31,7 +31,3 @@ class BookUpdate(BookBase):
     page_count: Optional[int] = None
     description: Optional[str] = None
     is_avaiable: Optional[bool] = None
-
-class BookDelete(BookBase):
-    "vou adicionar depois"
-
