@@ -1,9 +1,9 @@
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
-from db import SessionLocal, get_db
-from schemas import BookUpdate, BookCreate, BookResponse
+from app.db import SessionLocal, get_db
+from app.schemas import BookUpdate, BookCreate, BookResponse
 from typing import List
-from controllers import (
+from app.controllers import (
     create_book,
     update_book,
     get_book,
@@ -39,11 +39,10 @@ def update_book_router(book: BookUpdate, book_id: int, db:Session = Depends(get_
         raise HTTPException(status_code = 404, detail = "Book not found")
     return db_book
 
+
 @router.delete("/books/{book_id}", response_model = BookResponse)
 def delete_book_router(book_id: int, db:Session = Depends(get_db)):
     db_book = delete_book(db = db, book_id = book_id)
     if db_book is None:
         raise HTTPException(status_code = 404, detail = "Book not found")
     return db_book
-
-
