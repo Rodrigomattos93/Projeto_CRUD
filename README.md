@@ -1,22 +1,22 @@
-# 📚 Projeto CRUD de Livros - FastAPI & SQLite
+# 📚 Books CRUD Project - FastAPI & SQLite
 
 ![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi)
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 ![SQLite](https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white)
 ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
 
-Um sistema CRUD completo para gerenciamento de livros, desenvolvido com FastAPI e SQLite, pronto para Docker.
+A complete CRUD system for managing books, developed with FastAPI and SQLite, Docker-ready.
 
-## Funcionalidades
+## Features
 
--  Operações CRUD completas (Create, Read, Update, Delete)
--  Validação de dados com Pydantic
--  Banco de dados SQLite
--  Logs com Loguru
--  Documentação automática (Swagger UI e Redoc)
--  Pronto para containerização com Docker
+-  Full CRUD operations (Create, Read, Update, Delete)
+-  Data validation with Pydantic
+-  SQLite database
+-  Logging with Loguru
+-  Automatic documentation (Swagger UI and Redoc)
+-  Ready for containerization with Docker
 
-## Tecnologias utilizadas
+## Technologies Used
 
 - Python
 - FastAPI
@@ -29,54 +29,54 @@ Um sistema CRUD completo para gerenciamento de livros, desenvolvido com FastAPI 
 - Loguru
 - Git
 
-## Começando
+## Getting started
 
-### Pré-requisitos
+### Prerequisites
 
 - Python 3.12+
-- Poetry (gerenciador de dependências)
-- Docker (opcional)
+- Poetry (Dependency manager)
+- Docker (optional)
 
-### Instalação
+### Installation
 
 ```bash
 git clone https://github.com/Rodrigomattos93/projeto_crud.git
 cd projeto_crud
 ```
 
-### Execução
+### Running the Project
 
-Localmente:
+Locally:
 ```bash
-poetry install
+poetry install --no-root
 poetry env activate
 uvicorn app.main:app --reload
 ```
 
-Com Docker:
+With Docker:
 ```bash
 docker build -t livro-crud .
 docker run -d --name livro-crud -p 8000:8000 livro-crud
 ```
-### Documentação
+### Documentation
 
-A documentação da API estará disponível em:
+The API documentation will be available at:
 ```markdown
 - Swagger UI: `http://localhost:8000/docs`
 - Redoc: `http://localhost:8000/redoc`
 ```
 
-### Endpoints da API
+### API Endpoints
 
 | Método HTTP | Endpoint         | Descrição                          |
 |-------------|------------------|------------------------------------|
-| `GET`       | `/books/`        | Lista todos os livros              |
-| `GET`       | `/books/{id}`    | Obtém um livro específico          |
-| `POST`      | `/books/`        | Cria um novo livro                 |
-| `PUT`       | `/books/{id}`    | Atualiza um livro existente        |
-| `DELETE`    | `/books/{id}`    | Remove um livro                    |
+| `GET`       | `/books/`        | List all books                     |
+| `GET`       | `/books/{id}`    | Gets a specific book               |
+| `POST`      | `/books/`        | Creates a new book                 |
+| `PUT`       | `/books/{id}`    | Update an existing book            |
+| `DELETE`    | `/books/{id}`    | Delete a book                      |
 
-### Modelo de Dados
+### Data Model
 ```python
 class BookModel(Base):
     __tablename__ = "books"
@@ -93,7 +93,7 @@ class BookModel(Base):
     created_at = Column(DateTime, default=func.now())
 ```
 
-### Estrutura do Projeto
+### Project Structure
 ```projeto-crud/
 ├── app/
 │   ├── controllers.py    # Lógica de negócios
