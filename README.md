@@ -40,8 +40,8 @@ Um sistema CRUD completo para gerenciamento de livros, desenvolvido com FastAPI 
 ### Instalação
 
 ```bash
-git clone https://github.com/Rodrigomattos93/Projeto-CRUD.git
-cd projeto-crud
+git clone https://github.com/Rodrigomattos93/projeto_crud.git
+cd projeto_crud
 ```
 
 ### Execução
