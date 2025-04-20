@@ -29,14 +29,14 @@ Um sistema CRUD completo para gerenciamento de livros, desenvolvido com FastAPI 
 ```bash
 git clone https://github.com/Rodrigomattos93/Projeto-CRUD.git
 cd projeto-crud
-poetry install
-poetry env activate
 ```
 
 ### Execução
 
 Localmente:
 ```bash
+poetry install
+poetry env activate
 uvicorn app.main:app --reload
 ```
 
@@ -46,7 +46,7 @@ docker build -t livro-crud .
 docker run -d --name livro-crud -p 8000:8000 livro-crud
 ```
 
-Endpoints da API
+###Endpoints da API
 
 | Método HTTP | Endpoint         | Descrição                          |
 |-------------|------------------|------------------------------------|
@@ -56,7 +56,7 @@ Endpoints da API
 | `PUT`       | `/books/{id}`    | Atualiza um livro existente        |
 | `DELETE`    | `/books/{id}`    | Remove um livro                    |
 
-Modelo de Dados
+###Modelo de Dados
 ```python
 class BookModel(Base):
     __tablename__ = "books"
@@ -73,7 +73,7 @@ class BookModel(Base):
     created_at = Column(DateTime, default=func.now())
 ```
 
-Estrutura do Projeto
+###Estrutura do Projeto
 ```projeto-crud/
 ├── app/
 │   ├── controllers.py    # Lógica de negócios
