@@ -54,8 +54,8 @@ POST	/books/	Cria um novo livro
 PUT	/books/{id}	Atualiza um livro existente
 DELETE	/books/{id}	Remove um livro
 
-🏗️ Modelo de Dados
-python
+Modelo de Dados
+```python
 class BookModel(Base):
     __tablename__ = "books"
     
@@ -69,9 +69,10 @@ class BookModel(Base):
     description = Column(String, nullable=True)
     is_avaiable = Column(Boolean)
     created_at = Column(DateTime, default=func.now())
+```
 
-🛠️ Estrutura do Projeto
-projeto-crud/
+Estrutura do Projeto
+```projeto-crud/
 ├── app/
 │   ├── controllers.py    # Lógica de negócios
 │   ├── db.py             # Configuração do banco
@@ -83,3 +84,4 @@ projeto-crud/
 ├── Dockerfile            # Config Docker
 ├── pyproject.toml        # Dependências
 └── README.md             # Documentação
+```
