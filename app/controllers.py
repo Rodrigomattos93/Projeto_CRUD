@@ -44,8 +44,8 @@ def update_book(db: Session, book: BookUpdate, book_id: int):
         db_book.description = book.description
     if db_book.genre is not None:
         db_book.genre = book.genre
-    if db_book.is_avaiable is not None:
-        db_book.is_avaiable = book.is_avaiable
+    if db_book.is_available is not None:
+        db_book.is_available = book.is_available
     if db_book.page_count is not None:
         db_book.page_count = book.page_count
     if db_book.publisher is not None:

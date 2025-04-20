@@ -10,7 +10,7 @@ class BookBase(BaseModel):
     publisher: Optional[str] = None
     page_count: Optional[int] = None
     description: Optional[str] = None
-    is_avaiable: bool
+    is_availlable: bool
 
 class BookCreate(BookBase):
     pass
@@ -30,4 +30,4 @@ class BookUpdate(BaseModel):
     publisher: Optional[str] = None
     page_count: Optional[int] = None
     description: Optional[str] = None
-    is_avaiable: Optional[bool] = None
+    is_available: Optional[bool] = None
