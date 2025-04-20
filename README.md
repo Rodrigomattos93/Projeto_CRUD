@@ -16,6 +16,19 @@ Um sistema CRUD completo para gerenciamento de livros, desenvolvido com FastAPI 
 -  Documentação automática (Swagger UI e Redoc)
 -  Pronto para containerização com Docker
 
+## Tecnologias utilizadas
+
+- Python
+- FastAPI
+- SQLAlchemy
+- Pydantic
+- Uvicorn
+- SQLite
+- Poetry
+- Docker
+- Loguru
+- Git
+
 ## Começando
 
 ### Pré-requisitos
@@ -45,6 +58,13 @@ Com Docker:
 docker build -t livro-crud .
 docker run -d --name livro-crud -p 8000:8000 livro-crud
 ```
+### Documentação
+
+A documentação da API estará disponível em:
+```markdown
+- Swagger UI: `http://localhost:8000/docs`
+- Redoc: `http://localhost:8000/redoc`
+```markdown
 
 ### Endpoints da API
 
@@ -85,5 +105,6 @@ class BookModel(Base):
 │   └── schemas.py        # Validação
 ├── Dockerfile            # Config Docker
 ├── pyproject.toml        # Dependências
+├── books.db              # Banco de dados
 └── README.md             # Documentação
 ```
