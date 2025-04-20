@@ -64,7 +64,7 @@ A documentação da API estará disponível em:
 ```markdown
 - Swagger UI: `http://localhost:8000/docs`
 - Redoc: `http://localhost:8000/redoc`
-```markdown
+```
 
 ### Endpoints da API
 
