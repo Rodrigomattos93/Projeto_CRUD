@@ -27,19 +27,24 @@ Um sistema CRUD completo para gerenciamento de livros, desenvolvido com FastAPI 
 ### Instalação
 
 ```bash
-git clone https://github.com/seu-usuario/projeto-crud.git
+git clone https://github.com/Rodrigomattos93/Projeto-CRUD.git
 cd projeto-crud
 poetry install
-poetry shell
+poetry env activate
+```
 
 ### Execução
 
 Localmente:
+```bash
 uvicorn app.main:app --reload
+```
 
 Com Docker:
+```bash
 docker build -t livro-crud .
 docker run -d --name livro-crud -p 8000:8000 livro-crud
+```
 
 📚 Endpoints
 Método	Endpoint	Descrição
