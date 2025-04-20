@@ -108,3 +108,6 @@ class BookModel(Base):
 ├── books.db              # Banco de dados
 └── README.md             # Documentação
 ```
+
+### Deploy
+The application is hosted on Render and can be accessed at the following [link](https://projeto-crud-r5yr.onrender.com/books/)
