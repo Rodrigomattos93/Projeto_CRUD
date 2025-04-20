@@ -10,7 +10,7 @@ class BookBase(BaseModel):
     publisher: Optional[str] = None
     page_count: Optional[int] = None
     description: Optional[str] = None
-    is_availlable: bool
+    is_available: bool
 
 class BookCreate(BookBase):
     pass
