@@ -46,13 +46,15 @@ docker build -t livro-crud .
 docker run -d --name livro-crud -p 8000:8000 livro-crud
 ```
 
-📚 Endpoints
-Método	Endpoint	Descrição
-GET	/books/	Lista todos os livros
-GET	/books/{id}	Obtém um livro específico
-POST	/books/	Cria um novo livro
-PUT	/books/{id}	Atualiza um livro existente
-DELETE	/books/{id}	Remove um livro
+Endpoints da API
+
+| Método HTTP | Endpoint         | Descrição                          |
+|-------------|------------------|------------------------------------|
+| `GET`       | `/books/`        | Lista todos os livros              |
+| `GET`       | `/books/{id}`    | Obtém um livro específico          |
+| `POST`      | `/books/`        | Cria um novo livro                 |
+| `PUT`       | `/books/{id}`    | Atualiza um livro existente        |
+| `DELETE`    | `/books/{id}`    | Remove um livro                    |
 
 Modelo de Dados
 ```python
