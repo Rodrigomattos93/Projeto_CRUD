@@ -12,6 +12,6 @@ class BookModel(Base):
     genre = Column(String, index = True, nullable = True)
     publisher = Column(String, index = True, nullable = True)
     page_count = Column(String, index = True, nullable = True)
-    description = Column(String, index = True, nullable = True)
+    description = Column(Integer, index = True, nullable = True)
     is_available = Column(Boolean, index = True)
     created_at = Column(DateTime, default = func.now(), index = True)
